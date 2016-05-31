@@ -33,11 +33,6 @@ public class PatternsTest {
 				+ "bice mu dodeljen neko od dezurnih operatera. Ako se javi van radnog vremena usluzice ga\n"
 				+ "sluzba za hitne intervencije, a ako se javio u vreme vikenda, reagovace govorni automat.");
 		OnDutyFactory odf = new OnDutyFactory();
-		try {
-			System.in.read();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 		
 		OnDuty od = odf.getOnDuty();
 		od.getInfo();
