@@ -61,35 +61,33 @@ public class PatternsTest {
 
 	public static void main(String[] args) {
 		char entered = 'i';
-		do {
-			System.out.println("Pattern testing:\n" + "\t- to test Factory pattern press 1\n"
-					+ "\t- to test Singleton pattern press 2\n" + "\t- to test Decorator (Wrapper) pattern press 3\n"
-					+ "\t- to test Flyweight pattern press 4\n" + "\t- to EXIT press 0");
-			try {
-				entered = (char) System.in.read();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}  
-			switch (entered) {
-			case '0':
-				System.out.println("Demo exit. Bye-bye.");
-				break;
-			case '1':
-				PatternsTest.factoryTest();
-				break;
-			case '2':
-				PatternsTest.singletonTest();
-				break;
-			case '3':
-				PatternsTest.decoratorTest();
-				break;
-			case '4':
-				PatternsTest.flyweightTest();
-				break;
-			default:
-				System.out.println("There is no such a pattern.");
-			}
-		} while (entered != '0');
+		System.out.println("Pattern testing:\n" + "\t- to test Factory pattern press 1\n"
+				+ "\t- to test Singleton pattern press 2\n" + "\t- to test Decorator (Wrapper) pattern press 3\n"
+				+ "\t- to test Flyweight pattern press 4\n" + "\t- to EXIT press 0");
+		try {
+			entered = (char) System.in.read();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		switch (entered) {
+		case '0':
+			System.out.println("Demo exit. Bye-bye.");
+			break;
+		case '1':
+			PatternsTest.factoryTest();
+			break;
+		case '2':
+			PatternsTest.singletonTest();
+			break;
+		case '3':
+			PatternsTest.decoratorTest();
+			break;
+		case '4':
+			PatternsTest.flyweightTest();
+			break;
+		default:
+			System.out.println("There is no such a pattern.");
+		}
 	}
 
 }
