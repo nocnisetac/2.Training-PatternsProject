@@ -1,9 +1,9 @@
 package project.seventh.patterns;
 
-public class Macka implements Zivotinja {
+public class Cat implements Animal {
 
 	@Override
-	public void opis() {
+	public void describe() {
 		System.out.println("\tMacka je deo naseg zoo vrta!");
 	}
 

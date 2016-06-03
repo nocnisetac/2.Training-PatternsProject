@@ -1,9 +1,9 @@
 package project.seventh.patterns;
 
-public class Pas implements Zivotinja {
+public class Dog implements Animal {
 	
 	@Override
-	public void opis() {
+	public void describe() {
 		System.out.println("\tPas je deo naseg zoo vrta!");
 	}
 

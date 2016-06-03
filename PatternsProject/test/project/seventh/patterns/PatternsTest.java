@@ -18,23 +18,23 @@ public class PatternsTest {
 		String dna = "AGATACGATATATAC";
 		System.out.println("\tUlazna DNK-a sekvenca: " + dna);
 		for (int i = 0; i < dna.length(); i++) {
-			Baze baza = (Baze) FabrikaBaza.dohvatiBazu(Character.toString(dna.charAt(i)));
-			baza.ispis();
+			Base bs = (Base) BaseFactory.getBase(Character.toString(dna.charAt(i)));
+			bs.print();
 		}
 	}
 
 	public static void decoratorTest() {
 		System.out.println(" *** DECORATOR pattern demo ***\n"
 				+ "OPIS:\nU sistem koji opisuje zivotinje jednog zoo vrta, dodajemo novu osobinu: info o pelcovanju.");
-		Pas pas = new Pas();
-		PelcovanaZivotinja ppas = new PelcovanaZivotinja(new Pas());
-		PelcovanaZivotinja ppapagaj = new PelcovanaZivotinja(new Papagaj());
+		Dog dog = new Dog();
+		VaccinatedAnimal vdog = new VaccinatedAnimal(new Dog());
+		VaccinatedAnimal vparrot = new VaccinatedAnimal(new Parrot());
 		System.out.println("* Pas kod nas...");
-		pas.opis();
+		dog.describe();
 		System.out.println("* Pelcovani pas kod nas...");
-		ppas.opis();
+		vdog.describe();
 		System.out.println("* Pelcovani papagaj ko zmaj...");
-		ppapagaj.opis();
+		vparrot.describe();
 	}
 
 	public static void singletonTest() {
