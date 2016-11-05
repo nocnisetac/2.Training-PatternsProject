@@ -1,2 +1,2 @@
-# TrainingTwo_PatternsProject
+
 Java implementacija nekih popularnih šablona...
